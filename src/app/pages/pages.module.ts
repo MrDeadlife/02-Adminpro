@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+/* install */
+
+
+/* Components generated */
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { PagesComponent } from './pages.component';
@@ -7,6 +12,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -16,10 +23,13 @@ import { RouterModule } from '@angular/router';
     PagesComponent,
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
+    FormsModule, // usar el ngmodel en el input
     AppRoutingModule,
-    SharedModule, 
-    RouterModule //  presenta el router-oulet
+    SharedModule,
+    RouterModule, //  presenta el router-outlet
+    ComponentsModule,
+
   ],
   exports: [
     DashboardComponent,

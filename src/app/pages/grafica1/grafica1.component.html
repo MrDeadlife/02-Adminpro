@@ -1,1 +1,14 @@
-<p>grafica1 works!</p>
+<div class="row">
+  <div class="col-6">
+    <app-donuts  titulo="Grafica de Inventario" ></app-donuts>
+  </div>
+  <div class="col-6">
+    <app-donuts [labels]='Label1' [data]='data1' titulo="Grafica de Pupusas"></app-donuts> 
+  </div>
+  <div class="col-6">
+    <app-donuts titulo="Grafica de Gastos" ></app-donuts>
+  </div>
+  <div class="col-6">
+    <app-donuts titulo="Grafica de Personal"></app-donuts>
+  </div>
+</div>
