@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SettingsService } from '../services/settings.service';
+/* Declarando funcion de manera global desde /assets/js/customs.js */
+declare function customInitFuctions(): any;
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class PagesComponent implements OnInit {
   year = new Date().getFullYear();
-  constructor() { }
+  constructor(private settingsService: SettingsService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    customInitFuctions();
   }
-
 }
