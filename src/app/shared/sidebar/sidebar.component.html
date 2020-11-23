@@ -22,7 +22,7 @@
             <li><a href="javascript:void()">My Balance</a></li>
             <li><a href="javascript:void()">Inbox</a></li>
             <li><a routerLink="account-settings">Account Setting</a></li>
-            <li><a routerLink='/login'>LogIn</a></li> 
+            <li><a routerLink="/login">LogIn</a></li>
           </ul>
         </li>
         <li class="nav-devider"></li>
@@ -42,7 +42,14 @@
           >
           <ul aria-expanded="false" class="collapse">
             <li *ngFor="let submenu of item.submenu">
-              <a [routerLink]="submenu.url">{{submenu.titulo}}</a>
+              <a
+                [routerLink]="submenu.url"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >{{ submenu.titulo }}</a
+              >
+              <!-- routerLinkActiveOptions true, lo que indica 
+                que este enlace solo se marcara si es exacto a lo demandado -->
             </li>
           </ul>
         </li>

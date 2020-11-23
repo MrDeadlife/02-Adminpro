@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 /* install */
 
-
 /* Components generated */
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -15,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -23,22 +24,25 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     Grafica1Component,
     PagesComponent,
     AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule, // usar el ngmodel en el input
     AppRoutingModule,
     SharedModule,
-    RouterModule, //  presenta el router-outlet
+    RouterModule, //  presenta el router-outlet y el routerlink
     ComponentsModule,
-
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent,
   ],
 })
 export class PagesModule {}

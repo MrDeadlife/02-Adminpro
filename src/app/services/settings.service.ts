@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 export class SettingsService {
 
   constructor() {
-    console.log('Service init');
+   // console.log('Service init');
    }
 }
